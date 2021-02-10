@@ -36,11 +36,17 @@ header input{
 .movie{
   width: 250px;
   margin: 1rem;
+  margin-bottom: 7rem;
   text-align: center;
   border-radius: 10px;
-  overflow: hidden;
+  overflow:visible;
   position: relative;
   box-shadow: 3px 3px 5px rgba(0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.movie:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .movie img{
   max-width: 100%;
@@ -54,8 +60,8 @@ header input{
   padding: 1rem;
   height: 250px;
   overflow: auto;
-
 }
+
 .movie-info h3{
     margin: 0;
 }
@@ -73,6 +79,21 @@ header input{
   max-height: 100%;
   overflow:auto ;
   height: 100%;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.movie:hover .overlay{
+  opacity: 1;
 }
 .movie:hover .movie-overview{
   transform: translateX(0%);

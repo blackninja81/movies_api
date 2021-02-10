@@ -1,7 +1,6 @@
 import react, { useState } from "react";
 import "../index.css";
 import Movie from "./movies";
-import { firstAPI } from "./baseURL";
 
 const SEARCH_API =
   "https://api.themoviedb.org/3/search/movie?api_key=16f5d470f7694afe7d8be47ca98ae51d&query=";
@@ -19,13 +18,14 @@ function Searchbar(props) {
         .then((res) => res.json())
         .then((data) => {
           setSMovies(data.results);
+          console.log(data.results);
         });
-
   };
 
   const handleOnChange = (e) => {
     setSearchTerm(e.target.value);
   };
+  
   return (
     <div className="aMovies">
             <header className="search">
@@ -42,10 +42,9 @@ function Searchbar(props) {
         <h1>{enteredSearchTerm}</h1>
         <div className="movie-container">
           {smovies?.length > 0 &&
-            smovies.map((movie) => <Movie key={movie.id} {...movie} />)}            
+            smovies.map((movie) => <Movie {...movie} />)}            
         </div>
       </div>
-
     </div>
   );
 }
