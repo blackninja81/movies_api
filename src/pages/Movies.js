@@ -15,16 +15,17 @@ function Movie(props) {
     .then((data) => {
       setMovie(data);
       console.log(data);
+      console.log(data);
     });
     return () => {
       
     }
-  }, [])
+  }, )
 
   return (
     <div>
       <div className="movie-container">
-        <MovieInfo movie = {movie}/>
+        {movie && <MovieInfo movie = {movie}/>}
       </div>
     </div>
   );
