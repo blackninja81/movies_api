@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../index.css";
 import Movie from "../components/movies";
-import Searchbar from "../components/searchbar";
+import Searchbar from "../components/searchBar";
 
 const P_API =
   "https://api.themoviedb.org/3/discover/movie?api_key=16f5d470f7694afe7d8be47ca98ae51d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";

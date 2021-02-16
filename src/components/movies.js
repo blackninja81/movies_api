@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../index.css";
-import ViewDetails from "./viewdetails";
+import ViewDetails from "./viewDetails";
 
 const IMG_API = "https://image.tmdb.org/t/p/original/";
 
