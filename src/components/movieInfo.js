@@ -22,11 +22,11 @@ const MovieInfo = ({ movie }) => (
         <h3>back</h3>
       </div>
     </Link>
-    <img
+    {/* <img
       className="movie_image container-fluid"
       src={IMG_API + movie.backdrop_path}
       alt="No Preview Available"
-    />
+    /> */}
     <h3 className="title">
       {movie.title} ({movie.original_title})<h3>{movie.tagline}</h3>
     </h3>
